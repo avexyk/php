@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Blog en PHP</title>
+	<link rel="stylesheet" href="{{ 'css' | url }}/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ 'css' | url }}/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Blog Title</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8">
+
+				{% block content %}{% endblock %}
+
+			</div>
+
+			<div class="col-md-4">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo est libero mollitia aperiam. Assumenda, dolore! Corporis beatae quisquam nulla, culpa incidunt delectus illum, est, quas, in itaque nisi quo excepturi!
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<footer>
+					This is a footer<br>
+					<a href="{{ 'admin' | url }}">Admin Panel</a>
+				</footer>
+			</div>
+		</div>
+
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.8.7/dist/sweetalert2.all.min.js"></script>
+{% block js %}{% endblock %}
+</body>
+</html>
